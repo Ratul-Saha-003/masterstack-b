@@ -18,7 +18,7 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true })
 ).catch(err => console.log(process.env.DB_CONNECT, "Connection Failed", err));
 
 app.use(cors({
-  origin: 'https://masterstack-chi.vercel.app', 
+  origin: ['https://masterstack-chi.vercel.app', 'http://localhost:3001', 'https://masterstack.concetto.in', 'https://masterstack3.vercel.app'], 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
